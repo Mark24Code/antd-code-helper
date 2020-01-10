@@ -3,21 +3,28 @@
 	"displayName": "antd-code-helper",
 	"description": "antd-code-helper",
 	"version": "0.0.1",
+	"publisher": "mark1.zhang@liulishuo.com",
 	"engines": {
 		"vscode": "^1.41.0"
 	},
 	"categories": [
-		"Other"
+		"Snippets"
 	],
 	"activationEvents": [
 		"onCommand:extension.helloWorld"
 	],
 	"main": "./extension.js",
 	"contributes": {
-		"commands": [{
-            "command": "extension.helloWorld",
-			"title": "Hello World"
-		}]
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/antd-snippets.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/antd-snippets.json"
+      }
+    ]
 	},
 	"scripts": {
 		"test": "node ./test/runTest.js"

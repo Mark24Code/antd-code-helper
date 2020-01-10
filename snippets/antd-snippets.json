@@ -1,0 +1,43 @@
+{
+  // Place your snippets for javascript here. Each snippet is defined under a snippet name and has a prefix, body and 
+  // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+  // same ids are connected.
+  // Example:
+  "Button": {
+    "prefix": "btn",
+    "body": [
+      "<Button type=\"${1|primary,dashed,danger,link|}\">$2</Button>"
+    ],
+    "description": "Button with type."
+  },
+  "FormContainer": {
+    "prefix": "fc",
+    "body": [
+      "<Form onSubmit={this.handleSubmit}>",
+      "  $0",
+      "  <Form.Item>",
+      "    <Button type=\"primary\" htmlType=\"submit\">${2:搜索}</Button>",
+      "    <Button type=\"primary\" onClick={this.handleReset}>${3:重置}</Button>",
+      "  </Form.Item>",
+      "</Form>"
+    ],
+    "description": "Form Container"
+  },
+  "FormItemContainer": {
+    "prefix": "fi",
+    "body": [
+      "<Form.Item label={$1}>",
+      "    {getFieldDecorator($1, {",
+      "      rules: [",
+      "        {",
+      "          required: true,",
+      "          message: '不能为空',",
+      "        },",
+      "      ],",
+      "    })($0)}",
+      "</Form.Item>"
+    ],
+    "description": "Form Item Container"
+  }
+}
